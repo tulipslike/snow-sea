@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Base1;
+  src: url(fonts/BCcardL.ttf)
+}
+@font-face {
+  font-family: Base1B;
+  src: url(fonts/BCcardB.ttf)
+}
+@font-face {
+  font-family: Base2;
+  src: url(fonts/NanumSquare_acR.ttf)
+}
+@font-face {
+  font-family: Base2B;
+  src: url(fonts/NanumSquareB.ttf)
+}
+
+body {font-family: Base1, sans-serif}
+.title {font-family: Base1}
+
+
+
+
+
+
+
+
+

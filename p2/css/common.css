@@ -1,0 +1,386 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url(font.css);
+@import url(all.min.css);
+
+/*공통 스타일*/
+body {color: #333}
+
+[class $= "inner"] {
+  width: 1120px;
+  height: 100%;
+  margin: auto
+}
+
+/*1*/
+#header {
+  height: 360px;
+  background: url(../img/brandstory_visual_img.jpg) no-repeat center;
+  position: relative;
+/*  box-shadow: inset 0px 0px 50px rgba(0,0,0,0.7)*/
+}
+#header .gnb-btn {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  width: 45px;
+  height: 36px
+}
+#header .gnb-btn a {
+  display: block;
+  height: 100%;
+  background: url(../img/gnb_menu_ico.png) no-repeat 0 0;
+  background-size: 90px 36px;
+  transition: all 0.2s 
+}
+#header .gnb-btn a:hover {
+  background-position: -45px 0
+}
+
+/*본문 - 로컬 메뉴*/
+#main .sticky-menu {
+  height: 45px;
+  background: rgba(221, 221, 221, 0.9);
+  line-height: 45px;
+  color: #a57432;
+  font-weight: bold;
+  font-size: 15px;
+  
+  position: relative;
+  /*포지션 선언이유?
+  (포토샵-레이어처럼) 그림자가 위로 보이게 할 수 있음
+  포지션 X ==> header에 가려짐.
+  */
+  position: -webkit-sticky;
+/*  -webkit- 벤더프리픽스? 
+  적용되지 않는 브라우저에서도 표현 됨*/
+  position: sticky;
+  top: 0;
+/*  sticky? 
+  평소에는 relative ==> (조건이 참이면) fixed(화면고정)
+  */
+  box-shadow: 0px -30px 50px rgba(0,0,0,0.3)
+}
+#main .sticky-menu:hover {
+  background: #ddd
+}
+#main .sticky-menu a {
+  display: block;
+/*  border-left: 10px solid transparent*/
+}
+#main .sticky-menu a:hover {
+/*  border-left-color: inherit*/
+  color: #333
+}
+#main .sticky-menu .local-title {
+  position: relative;
+}
+#main .sticky-menu .local-title:before {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  /* 21.5px 
+  45(높이)-1(두께)= 44 /2 == 22px*/
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #a57432;
+  opacity: 0.5
+}
+#main .sticky-menu > * {
+  float: left;
+  padding: 0 50px;
+}
+
+/*본문-공통스타일*/
+#main [class $= "inner"] {
+  padding: 80px 0
+}
+#main .con-1-inner {
+  padding-top: 0
+}
+#main .content .title {
+  float: left; 
+  width: 30%;
+  color: #a57432;
+  font-size: 25px;
+  text-shadow: 10px 10px 8px rgba(0,0,0,0.2)
+}
+#main .content .text-box {
+  margin-left: 30%;
+  line-height: 1.8;
+  font-size: 18px
+}
+#main .text-box blockquote {
+  margin-bottom: 40px;
+}
+#main .text-box blockquote:first-line {
+  font-weight: bold;
+}
+}
+#main .text-box i {
+  font-size: small
+}
+#main .text-box p {
+  letter-spacing: -0.5px;
+  text-align: justify
+}
+#main .text-box q {
+  color: #a57432;
+  font-weight: bold
+}
+
+/*con-3*/
+#main .con-3 {
+  height: 404px;
+  background: url(../img/brandstory_img_02.jpg) no-repeat center center;
+  background-size: cover
+}
+
+/*본문-제목*/
+#main h2 {
+  text-align: center;
+  padding: 100px 0 80px;
+  font-size: 50px
+}
+/*con-1*/
+#main .con-1 h3 {
+  margin-top: 80px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+#main .con-1 h3 > * {
+  display: block;
+}
+#main .con-1 h3 span {
+  font-weight: normal;
+  font-size: 20px
+}
+#main .con-1 h3 b {
+  font-size: 40px;
+  color: #222
+}
+
+#main .con-1 h3 + p {
+  text-align: center;
+  line-height: 1.4;
+  letter-spacing: -1px;
+  font-size: 15px
+}
+#main .con-1-inner {
+  border-bottom: 1px solid #ddd
+}
+
+/*con-5*/
+#main .con-4-inner {
+  padding-bottom: 0
+}
+#main .con-5-inner {
+  padding-top: 0
+}
+#main .con-5 h3 {
+  height: 153px;
+  background: url(../img/brandstory_img_03.png) no-repeat center top;
+  margin: 100px 0
+}
+#main .tabs {}
+
+#main .tab-menu {
+  margin-bottom: 40px;
+}
+#main .tab-menu p {
+  margin-top: 20px;
+  line-height: 1.5;
+  color: #a57432;
+  letter-spacing: -1px;
+  font-size: 14px;
+  font-weight: bold
+}
+#main .tab-menu li {
+  float: left;
+  width: 23.5%;
+  text-align: center;
+}
+#main .tab-menu .thumb {
+  border: 1px solid #ddd;
+  height: 180px;
+  background: no-repeat center center / cover
+}
+#main .tab-menu a {
+  display: block;
+  height: 100%
+}
+
+#main .tab-menu li:not(:last-child) {
+  margin-right: 2%
+}
+
+#main .tab-menu li:hover .thumb {
+  border-color: #a57432
+}
+#main .tab-menu li:nth-child(1) .thumb {
+  background-image: url(../img/brandstory_img_04.jpg)
+}
+#main .tab-menu li:nth-child(2) .thumb{
+  background-image: url(../img/brandstory_img_05.jpg)
+}
+#main .tab-menu li:nth-child(3) .thumb {
+  background-image: url(../img/brandstory_img_06.jpg)
+}
+#main .tab-menu li:nth-child(4) .thumb {
+  background-image: url(../img/brandstory_img_07.jpg)
+}
+
+#main .tab-content {
+  background: lightgray;
+  height: 646px;
+  overflow: hidden;
+}
+#main .tab-content img {
+  display: block;
+  width: 100%;
+}
+
+/*footer*/
+#footer {
+  background: #555;
+  color: #eee;
+  font-size: small;
+  letter-spacing: -0.5px
+}
+#footer .footer-inner {
+  padding: 40px 0
+}
+#footer .logo {
+  float: left;
+}
+#footer .footer-con {
+  float: left;
+  margin-left: 50px
+}
+#footer .fnb {
+  overflow: hidden;
+  margin-bottom: 15px
+}
+#footer .fnb a {
+  display: block;
+  float: left;
+  padding: 0 10px;
+  font-size: 1.2em 
+}
+#footer .fnb a:hover {
+  text-shadow: 1px 1px #111
+}
+#footer .fnb a:not(:last-child) {
+  border-right: 1px solid #777
+}
+
+#footer address {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+#footer .copyright {
+  line-height: 1.5
+}
+#footer .footer-con span {
+  margin: 0 8px
+}
+
+#footer .footer-util {
+  float: right;
+}
+#footer .sns {
+  margin-bottom: 15px;
+}
+#footer .sns a {
+  font-size: 1.2em;
+  padding: 0 5px
+}
+#footer .sns a:hover {
+  text-shadow: 1px 1px #111
+}
+
+#footer .util-menu {
+  margin-bottom: 15px
+}
+#footer .util-menu a {
+  padding: 0 5px;
+}
+#footer .util-menu a:hover {
+  text-shadow: 1px 1px #111
+}
+
+#footer .footer-util p {
+  line-height: 1.5
+}
+
+/*퀵 메뉴*/
+#quick-menu {
+  position: fixed;
+  z-index: 1;
+  width: 50px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #999;
+  text-align: center;
+  color: #fff;
+  box-shadow: -5px 5px 20px rgba(0,0,0,0.3)
+}
+#quick-menu a {
+  display: block;
+  padding: 28px 6px;
+  font-size: small;
+  text-shadow: 1px 1px #333
+}
+/*스프라이트 이미지로 만들기(사용되는 아이콘 들)*/
+#quick-menu a:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 22px;
+  background: url(../img/quick_menu_ico1.png) no-repeat 0 0;
+  background-size: auto 22px;
+  margin: auto;
+  margin-bottom: 10px
+}
+#quick-menu a:nth-child(2n) {
+  background-color: #a57432;
+}
+
+#quick-menu a:nth-child(1):before {}
+#quick-menu a:nth-child(2):before {
+  width: 19px;
+  background-position: -61px 0
+}
+
+#quick-menu a:nth-child(3) {
+  background-color: #ddd;
+  color: #a57432
+}
+#quick-menu a:nth-child(3):before {
+  background: url(../img/quick_menu_wait.png) no-repeat center;
+  background-size: auto 22px
+}
+#quick-menu a:nth-child(4):before {
+  width: 21px;
+  background-position: -40px 0
+}
+#quick-menu a:nth-child(5) {
+  padding: 15px 0
+}
+#quick-menu a:nth-child(5):before {
+  display: none;
+}
+#quick-menu a:nth-child(5) i {
+  display: inline-block;
+  margin-bottom: 10px
+}
+
+
+#quick-menu a:nth-child(n) {
+  transition: all 0.2s
+}
+#quick-menu a:nth-child(n):hover {
+  background: #222
+}
